@@ -1,0 +1,2 @@
+class PressRelease < News
+end

@@ -1,0 +1,2 @@
+class ImportantEvent < News
+end

@@ -1,0 +1,4 @@
+%li
+  = news_item.title
+  = link_to 'Детально', admin_news_url(news_item)
+  = link_to 'Видалити', admin_news_url(news_item), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'
