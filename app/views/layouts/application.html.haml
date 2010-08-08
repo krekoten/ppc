@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title
+      Патріарший паломницький центр
+    = stylesheet_link_tag css_file_list, :cache => css_file_name
+    = javascript_include_tag :defaults, :cache => true
+    = csrf_meta_tag
+  %body
+    .container_12
+      .grid_12.top_grey.alpha.omega
+      .grid_12.top_white.alpha.omega
+      .grid_12.yellow_bg.alpha.omega
+        .grid_3.alpha
+          = render :partial => 'layouts/application/left'
+        .grid_9.omega
+          = yield
+      .grid_12.alpha.omega.bottom
+        = render :partial => 'layouts/application/bottom'
+      .grid_12.alpha.omega.footer
+        = render :partial => 'layouts/application/footer'

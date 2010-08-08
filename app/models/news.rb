@@ -22,7 +22,7 @@ class News < ActiveRecord::Base
     self.attributes = attributes
     model_class = self.class.model_class(attributes)
     self.type = model_class.to_s
-    self#.becomes(self.class.model_class(attributes))
+    self
   end
   
   def _set_title

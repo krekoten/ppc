@@ -1,0 +1,175 @@
+* {
+  font: {
+    family: Arial;
+    size: 14px;
+  }
+}
+
+#logo {
+  background-image: url('/images/logo.png');
+  background-repeat: no-repeat;
+  width: 157px;
+  height: 322px;
+  display: block;
+  margin-left: 31px;
+}
+
+.top_grey {
+  background: #dadada;
+  height: 5px;
+}
+
+.top_white {
+  height: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+#left_menu {
+  list-style: none;
+  width: 238px;
+  margin-left: -10px;
+  
+  li {
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+    background: url('/images/menu.png');
+    height: 40px;
+    
+    &:hover, &.active {
+      background: url('/images/menu.png') 0 53px;
+      
+      a {
+        color: #efb511;
+      }
+    }
+    
+    a {
+      text-decoration: none;
+      color: #959494;
+      font: {
+        size: 18px;
+      }
+    }
+  }
+}
+
+.yellow_bg {
+  background: url('/images/main_bg.png') bottom repeat-x;
+}
+
+.tags_cloud {
+  height: 260px;
+}
+
+.margin_top_10 {
+  margin-top: 10px;
+}
+
+.margin_top_30 {
+  margin-top: 30px;
+}
+
+.bottom {
+  background: url('/images/bottom.png') repeat-x;
+  height: 351px;
+}
+
+.home_ico {
+  background: url('/images/contacts.png');
+  width: 11px;
+  height: 9px;
+  margin: 10px 0;
+}
+
+.email_ico {
+  background: url('/images/contacts.png') 10px 0;
+  width: 10px;
+  height: 7px;
+  margin: 10px 0;
+}
+
+.address {
+  color: #515151;
+}
+
+.email {
+  color: #efb511;
+}
+
+.contacts {
+  margin: 50px 20px;
+}
+
+.pilgrimage_places {
+  height: 350px;
+  width: 348px;
+  float: left;
+  margin-left: -20px;
+  
+  .pilgrimage_header {
+    color: #515151;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .pilgrimage_map {
+    border: 1px solid #ebebeb;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding-top: 2px;
+    padding-left: 2px;
+    height: 287px;
+  }
+}
+
+.calendar {
+  height: 350px;
+  width: 348px;
+  float: left;
+  
+  .calendar_header {
+    color: #515151;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .calendar_body {
+  }
+}
+
+.footer {
+  background: #f3c84d;
+  height: 120px;
+  
+  .navigation {
+    width: 700px;
+    margin-top: 50px;
+    
+    li {
+      display: inline;
+      margin: 5px;
+      text-align: center;
+      color: #94700c;
+      font-size: 14px;
+      
+      a {
+        color: #94700c;
+        font-size: 14px;
+        text-decoration: none;
+        border-bottom: 2px solid #94700c;
+      }
+    }
+  }
+  
+  .copyright {
+    text-align: center;
+    color: #757575;
+    font-size: 12px;
+  }
+}
