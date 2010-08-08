@@ -1,0 +1,2 @@
+class ImportantEventsController < NewsController
+end

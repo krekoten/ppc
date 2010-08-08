@@ -3,7 +3,9 @@ class News < ActiveRecord::Base
   validates_presence_of :body
   validates_length_of :body, :minimum => 5
   
-  before_save :_set_title
+  before_save :_set_title, :_set_held_on
+  
+  scope :latest, order('held_on DESC')
   
   # Define predicate methods for checking if news item has special meaning
   [:press_release, :important_event].each do |method_name|
@@ -29,6 +31,11 @@ class News < ActiveRecord::Base
     self.title = Sanitize.clean(self.body).truncate(40) if self.title.empty?
   end
   protected :_set_title
+  
+  def _set_held_on
+    self.held_on = Date.now if self.held_on.blank?
+  end
+  protected :_set_held_on
   
   class << self
     def build params

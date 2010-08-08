@@ -13,6 +13,24 @@ module ApplicationHelper
     css = {
       'welcome#index' => [
         'welcome/index'
+      ],
+      'news#index'    => [
+        'news/index'
+      ],
+      'press_releases#index'    => [
+        'news/index'
+      ],
+      'important_events#index'    => [
+        'news/index'
+      ],
+      'news#show'    => [
+        'news/show'
+      ],
+      'press_releases#show'    => [
+        'news/show'
+      ],
+      'important_events#show'    => [
+        'news/show'
       ]
     }
     

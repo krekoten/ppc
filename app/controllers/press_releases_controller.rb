@@ -1,0 +1,2 @@
+class PressReleasesController < NewsController
+end

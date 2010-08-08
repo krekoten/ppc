@@ -49,6 +49,10 @@ Ppc::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   
+  resources :news
+  resources :press_releases
+  resources :important_events
+  
   namespace :admin do
     resources :news
   end

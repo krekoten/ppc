@@ -1,0 +1,10 @@
+.important_event
+  %ul.date
+    %li
+      = important_event.held_on.strftime('%d')
+    %li
+      = important_event.held_on.strftime('%m')
+    %li
+      = important_event.held_on.strftime('%y')
+  .event_body
+    = important_event.body
