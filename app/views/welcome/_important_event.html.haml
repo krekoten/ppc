@@ -7,4 +7,4 @@
     %li
       = important_event.held_on.strftime('%y')
   .event_body
-    = important_event.body
+    = important_event.body.html_safe

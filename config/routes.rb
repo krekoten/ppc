@@ -1,4 +1,6 @@
 Ppc::Application.routes.draw do
+  devise_for :admins, :controllers => { :sessions => "admins/sessions" }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -53,8 +55,11 @@ Ppc::Application.routes.draw do
   resources :press_releases
   resources :important_events
   
-  namespace :admin do
+  namespace :admins do
+    resources :admins
     resources :news
+    
+    root :to => "news#index"
   end
   
   root :to => "welcome#index"

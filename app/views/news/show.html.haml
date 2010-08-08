@@ -2,6 +2,6 @@
   %h1
     = @item.title
   .news_body
-    = @item.body
+    = @item.body.html_safe
   .held_on
     = @item.held_on

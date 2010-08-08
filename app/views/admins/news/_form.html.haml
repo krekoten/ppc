@@ -1,0 +1,16 @@
+.grid_12
+  = form.label :title
+  %br/
+  = form.text_field :title
+.grid_12
+  = form.label :body
+  %br/
+  = form.text_area :body, :class => "mceEditor"
+.grid_12
+  = form.check_box :press_release
+  = form.label :press_release
+.grid_12
+  = form.check_box :important_event
+  = form.label :important_event
+.grid_12
+  = submit_tag 'Зберегти'

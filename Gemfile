@@ -4,6 +4,12 @@ gem 'rails', '3.0.0.rc'
 gem 'mysql'
 gem 'haml'
 gem 'sanitize'
+gem 'devise'
+gem 'tiny_mce'
+
+group :production do
+  gem 'aws-s3', :require => 'aws/s3'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'

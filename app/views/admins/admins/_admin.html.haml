@@ -1,0 +1,7 @@
+.grid_11{:class => admin_counter % 2 == 0 ? 'odd' : 'even'}
+  .grid_9.alpha
+    = admin.email
+  .grid_1
+    = link_to 'Редагувати', edit_admins_admin_url(admin)
+  .grid_1.omega
+    = link_to 'Видалити', admins_admin_url(admin), :method => :destroy, :confirm => 'Ви впевнені?'

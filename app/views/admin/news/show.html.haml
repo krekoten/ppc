@@ -1,9 +1,0 @@
-%h2
-  = @news_item.title
-%div
-  = @news_item.body
-= link_to 'Редагувати', edit_admin_news_url(@news_item)
-|
-= link_to 'Видалити', admin_news_url(@news_item), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'
-|
-= link_to 'Назад', admin_news_index_url

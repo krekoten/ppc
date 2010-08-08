@@ -1,0 +1,6 @@
+= @admin.email
+%br/
+Входів: #{@admin.sign_in_count}
+%br/
+= link_to 'Редагувати', edit_admins_admin_url(@admin)
+= link_to 'Видалити', admins_admin_url(@admin), :method => :destroy, :confirm => 'Ви впевнені?'

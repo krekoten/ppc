@@ -1,0 +1,16 @@
+%h2
+  Адміни
+.grid_11.main_actions
+  = link_to 'Створити адміна', new_admins_admin_url
+.grid_12.table_header.alpha.omega
+  .grid_9
+    E-mail
+  .grid_2
+    Дії
+- unless @admins.empty?
+  = render :partial => 'admin', :collection => @admins
+- else
+  .grid_12.alpha.omega.empty
+    Немає жодного адміна
+.grid_11.main_actions
+  = link_to 'Створити адміна', new_admins_admin_url

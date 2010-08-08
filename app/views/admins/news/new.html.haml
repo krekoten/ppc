@@ -1,0 +1,5 @@
+%h2
+  Нова новина
+= form_for @news_item, :url => admins_news_index_url do |form| 
+  = render :partial => 'form', :locals => {:form => form}
+= link_to 'Назад', admins_news_index_url

@@ -1,0 +1,9 @@
+.grid_11{:class => news_item_counter % 2 == 0 ? 'odd' : 'even'}
+  .grid_8.alpha
+    = news_item.title
+  .grid_1
+    = link_to 'Детально', admins_news_url(news_item)
+  .grid_1
+    = link_to 'Редагувати', edit_admins_news_url(news_item)
+  .grid_1.omega
+    = link_to 'Видалити', admins_news_url(news_item), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'

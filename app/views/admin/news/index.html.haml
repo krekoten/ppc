@@ -1,9 +1,0 @@
-%h2
-  Новини
-%ul
-  - unless @news.empty?
-    = render :partial => 'news_item', :collection => @news
-  - else
-    %li
-      Немає жодної новини
-= link_to 'Створити новину', new_admin_news_url

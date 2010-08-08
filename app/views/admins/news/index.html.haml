@@ -1,0 +1,16 @@
+%h2
+  Новини
+.grid_11.main_actions
+  = link_to 'Створити новину', new_admins_news_url
+.grid_12.table_header.alpha.omega
+  .grid_8
+    Заголовок
+  .grid_3
+    Дії
+- unless @news.empty?
+  = render :partial => 'news_item', :collection => @news
+- else
+  .grid_12.alpha.omega.empty
+    Немає жодної новини
+.grid_11.main_actions
+  = link_to 'Створити новину', new_admins_news_url
