@@ -5,6 +5,12 @@ module Admins
     
     before_filter :_get_news, :only => [:index]
     before_filter :_get_news_item, :except => [:index]
+    
+    def index
+    end
+    
+    def edit
+    end
 
     def create
       if @news_item.save

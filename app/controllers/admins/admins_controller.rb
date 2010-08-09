@@ -5,6 +5,12 @@ module Admins
     
     skip_before_filter :_create_admin
     
+    def index
+    end
+    
+    def edit
+    end
+    
     def create
       if @admin.save
         redirect_to admins_root_url
