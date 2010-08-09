@@ -1,5 +1,5 @@
 module Admins
-  class AdminsController < ApplicationController
+  class AdminsController < Admins::ApplicationController
     before_filter :_load_admin, :except => [:index]
     before_filter :_load_admins, :only => [:index]
     

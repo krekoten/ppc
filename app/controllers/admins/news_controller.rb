@@ -1,5 +1,5 @@
 module Admins
-  class NewsController < ApplicationController
+  class NewsController < Admins::ApplicationController
 
     uses_tiny_mce :only => [:new, :create, :edit, :update]
     
