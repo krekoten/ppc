@@ -3,9 +3,3 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 db/schema.rb
-public/stylesheets/all.css
-public/javascripts/all.js
-public/stylesheets/layout.css
-public/stylesheets/welcome
-public/stylesheets/news
-public/stylesheets/admin.css

@@ -1,0 +1,6 @@
+.news {
+  list-style: none; }
+  .news li {
+    margin: 5px 0; }
+    .news li a {
+      color: #515151; }

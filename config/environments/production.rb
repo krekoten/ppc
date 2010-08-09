@@ -46,4 +46,9 @@ Ppc::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  Haml::Template.options[:format] = :html5
+  Haml::Template.options[:ugly] = true
+  
+  Sass::Plugin.options[:style] = :compressed
 end
