@@ -58,6 +58,7 @@ Ppc::Application.routes.draw do
   namespace :admins do
     resources :admins
     resources :news
+    resources :sessions
     
     root :to => "news#index"
   end
