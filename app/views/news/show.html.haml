@@ -5,3 +5,13 @@
     = @item.body.html_safe
   .held_on
     = @item.held_on
+  - if @item.author
+    .author
+      Автор:
+      %br/
+      = @item.author
+  - if @item.source
+    .source
+      Джерело:
+      %br/
+      = @item.source

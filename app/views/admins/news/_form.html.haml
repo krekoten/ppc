@@ -1,16 +1,41 @@
 .grid_12
-  = form.label :title
+  = form.label :title, "Заголовок"
   %br/
   = form.text_field :title
 .grid_12
-  = form.label :body
+  %br/
+  = form.label :author, "Автор"
+  %br/
+  = form.text_field :author
+.grid_12
+  %br/
+  = form.label :source, "Джерело"
+  %br/
+  = form.text_field :source
+.grid_12
+  %br/
+  = form.label :held_on, "Коли"
+  %br/
+  = form.date_select :held_on
+.grid_12
+  %br/
+  = form.label :body, "Тіло"
+  %span.required
+    *
   %br/
   = form.text_area :body, :class => "mceEditor"
 .grid_12
   = form.check_box :press_release
-  = form.label :press_release
+  = form.label :press_release, "Прес реліз"
 .grid_12
   = form.check_box :important_event
-  = form.label :important_event
+  = form.label :important_event, "Важлива подія"
+/.grid_12
+/  = link_to 'Добавити файл', '#', :class => 'add_file'
+/.grid_12#file_container
 .grid_12
   = submit_tag 'Зберегти'
+
+.grid_9.alpha#file_clone{:style => 'display: none;'}
+  = file_field_tag 'attachment[]'
+  = link_to 'Видалити', '#', :class => 'remove_file'

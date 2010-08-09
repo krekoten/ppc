@@ -1,16 +1,1 @@
-= form_for [:admins, @admin] do |form|
-  .grid_12
-    = form.label :email
-    %br/
-    = form.text_field :email
-  .grid_12
-    = form.label :password
-    %br/
-    = form.password_field :password
-  .grid_12
-    = form.label :password_confirmation
-    %br/
-    = form.password_field :password_confirmation
-  .grid_12
-    = submit_tag 'Зберегти'
-= link_to 'Назад', admins_admins_url
+= render :partial => 'form', :locals => {:admin => @admin}

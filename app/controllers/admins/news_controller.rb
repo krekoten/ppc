@@ -22,6 +22,11 @@ module Admins
     end
 
     def update
+      params[:attachment].each do |attach|
+        puts attach.inspect
+        puts attach.class.to_s
+      end if params[:attachment]
+      
       if @news_item.set_attributes_and_model(params[:news]).save
         redirect_to admins_news_index_url
       else
