@@ -2,8 +2,8 @@ module Admins
   class SacredObjectsController < Admins::ApplicationController
     respond_to :html
 
-    defore_filter :_load_sacred_objects, :only => [:index]
-    defore_filter :_load_sacred_object, :except => [:index]
+    before_filter :_load_sacred_objects, :only => [:index]
+    before_filter :_load_sacred_object, :except => [:index]
 
     def index
       respond_with(@sacred_objects)
