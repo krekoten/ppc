@@ -30,12 +30,22 @@
 .grid_12
   = form.check_box :important_event
   = form.label :important_event, "Важлива подія"
-/.grid_12
-/  = link_to 'Добавити файл', '#', :class => 'add_file'
-/.grid_12#file_container
+- unless item.attachments.empty?
+  .grid_12
+    - item.attachments.each do |attachment|
+      = form.fields_for :attachments, attachment do |att_fields|
+        .thumb
+          = image_tag attachment.attachment.url(:small_thumb)
+          %br
+          = att_fields.label :_destroy, 'Видалити?'
+          = att_fields.check_box :_destroy
+.grid_12
+	
+.grid_12
+  = link_to 'Добавити файл', '#', :class => 'add_file'
+.grid_12#file_container
+.grid_9.alpha#file_clone{:style => 'display: none;'}
+  = file_field_tag 'news[attachments_attributes][][attachment]'
+  = link_to 'Видалити', '#', :class => 'remove_file'
 .grid_12
   = submit_tag 'Зберегти'
-
-.grid_9.alpha#file_clone{:style => 'display: none;'}
-  = file_field_tag 'attachment[]'
-  = link_to 'Видалити', '#', :class => 'remove_file'

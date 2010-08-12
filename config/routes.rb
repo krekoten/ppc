@@ -54,10 +54,12 @@ Ppc::Application.routes.draw do
   resources :news
   resources :press_releases
   resources :important_events
+  resources :sacred_objects
   
   namespace :admins do
     resources :admins
     resources :news
+    resources :sacred_objects
     resources :sessions
     
     root :to => "news#index"

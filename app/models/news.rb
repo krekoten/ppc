@@ -6,6 +6,9 @@ class News < ActiveRecord::Base
   before_save :_set_title, :_set_held_on
   
   scope :latest, order('held_on DESC')
+
+	has_many :attachments, :as => :attachable
+	accepts_nested_attributes_for :attachments, :allow_destroy => true
   
   # Define predicate methods for checking if news item has special meaning
   [:press_release, :important_event].each do |method_name|

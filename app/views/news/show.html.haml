@@ -15,3 +15,6 @@
       Джерело:
       %br/
       = @item.source
+  - if @item.attachments
+    - @item.attachments.each do |attachment|
+      = image_tag attachment.attachment.url

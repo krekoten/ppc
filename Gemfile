@@ -6,6 +6,7 @@ gem 'haml'
 gem 'sanitize'
 gem 'devise'
 gem 'tiny_mce'
+gem 'paperclip'
 
 group :production do
   gem 'aws-s3', :require => 'aws/s3'
