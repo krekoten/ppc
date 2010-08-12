@@ -1,6 +1,6 @@
 %ul#left_menu
-  %li.center
-    = link_to "САКРАЛЬНІ ОБ'ЄКТИ", '#'
+  %li.center{:class => (current_page?(:controller => :sacred_objects) ? 'active' : '')}
+    = link_to "САКРАЛЬНІ ОБ'ЄКТИ", sacred_objects_url
   %li.center{:class => (current_page?(:controller => :news) ? 'active' : '')}
     = link_to "НОВИНИ", news_index_url
   %li.center

@@ -1,0 +1,16 @@
+%h2
+  Сакральні об'єкти
+.grid_11.main_actions
+  = link_to 'Створити', new_admins_sacred_object_url
+.grid_12.table_header.alpha.omega
+  .grid_8
+    Заголовок
+  .grid_3
+    Дії
+- unless @sacred_objects.empty?
+  = render :partial => 'sacred_object', :collection => @sacred_objects
+- else
+  .grid_12.alpha.omega.empty
+    Немає жодного об'єкту
+.grid_11.main_actions
+  = link_to 'Створити', new_admins_sacred_object_url

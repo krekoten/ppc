@@ -1,0 +1,44 @@
+.grid_12
+  = form.label :title, "Заголовок"
+  %span.required
+    *
+  %br/
+  = form.text_field :title
+.grid_12
+  %br/
+  = form.label :contacts, "Контакти"
+  %span.required
+    *
+  %br/
+  = form.text_area :contacts
+.grid_12
+  %br/
+  = form.label :history, "Історична довідка"
+  %span.required
+    *
+  %br/
+  = form.text_area :history, :class => "mceEditor"
+.grid_12
+  %label
+    Зв'язані новини
+- @news.each do |news_item|
+  .grid_12
+    = check_box_tag 'sacred_object[news_ids][]', news_item.id, item.news.include?(news_item), :id => "news_item_#{news_item.id}"
+    = label_tag "news_item_#{news_item.id}", news_item.title
+- unless item.attachments.empty?
+  .grid_12
+    - item.attachments.each do |attachment|
+      = form.fields_for :attachments, attachment do |att_fields|
+        .thumb
+          = image_tag attachment.attachment.url(:small_thumb)
+          %br
+          = att_fields.label :_destroy, 'Видалити?'
+          = att_fields.check_box :_destroy
+.grid_12
+  = link_to 'Добавити файл', '#', :class => 'add_file'
+.grid_12#file_container
+.grid_9.alpha#file_clone{:style => 'display: none;'}
+  = file_field_tag 'sacred_object[attachments_attributes][][attachment]'
+  = link_to 'Видалити', '#', :class => 'remove_file'
+.grid_12
+  = submit_tag 'Зберегти'

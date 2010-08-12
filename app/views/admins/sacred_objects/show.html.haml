@@ -1,0 +1,17 @@
+%h2
+  = @sacred_object.title
+%div
+  = @sacred_object.contacts
+%br/
+%div
+  = @sacred_object.history.html_safe
+- unless @sacred_object.attachments.empty?
+  %div
+    - @sacred_object.attachments.each do |attachment|
+      .thumb
+        = image_tag attachment.attachment.url(:small_thumb)
+= link_to 'Редагувати', edit_admins_sacred_object_url(@sacred_object)
+|
+= link_to 'Видалити', admins_sacred_object_url(@sacred_object), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'
+|
+= link_to 'Назад', admins_sacred_objects_url

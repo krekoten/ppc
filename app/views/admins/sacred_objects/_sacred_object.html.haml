@@ -1,0 +1,9 @@
+.grid_11{:class => sacred_object_counter % 2 == 0 ? 'odd' : 'even'}
+  .grid_8.alpha
+    = sacred_object.title
+  .grid_1
+    = link_to 'Детально', admins_sacred_object_url(sacred_object)
+  .grid_1
+    = link_to 'Редагувати', edit_admins_sacred_object_url(sacred_object)
+  .grid_1.omega
+    = link_to 'Видалити', admins_sacred_object_url(sacred_object), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'

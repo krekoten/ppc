@@ -9,6 +9,8 @@ class News < ActiveRecord::Base
 
 	has_many :attachments, :as => :attachable
 	accepts_nested_attributes_for :attachments, :allow_destroy => true
+
+  has_and_belongs_to_many :sacred_objects
   
   # Define predicate methods for checking if news item has special meaning
   [:press_release, :important_event].each do |method_name|

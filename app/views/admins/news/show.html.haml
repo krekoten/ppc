@@ -2,6 +2,11 @@
   = @news_item.title
 %div
   = @news_item.body.html_safe
+- unless @news_item.attachments.empty?
+  %div
+    - @news_item.attachments.each do |attachment|
+      .thumb
+        = image_tag attachment.attachment.url(:small_thumb)
 = link_to 'Редагувати', edit_admins_news_url(@news_item)
 |
 = link_to 'Видалити', admins_news_url(@news_item), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'

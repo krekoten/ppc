@@ -63,7 +63,7 @@ input[type=text], input[type=password], textarea {
 input[type=text] {
   height: 20px; }
 
-input, select {
+input, select, textarea {
   border: 2px solid #515151; }
 
 label {

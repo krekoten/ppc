@@ -1,0 +1,5 @@
+%h2
+  Новий сакральний об'єкт
+= form_for [:admins, @sacred_object], :html => { :multipart => true } do |form| 
+  = render :partial => 'form', :locals => {:form => form, :item => @sacred_object}
+= link_to 'Назад', admins_sacred_objects_url

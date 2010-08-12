@@ -31,6 +31,12 @@ module ApplicationHelper
       ],
       'important_events#show'    => [
         'news/show'
+      ],
+      'sacred_objects#index'    => [
+        'news/index'
+      ],
+      'sacred_objects#show'    => [
+        'news/show'
       ]
     }
     

@@ -1,0 +1,17 @@
+.grid_9.alpha.omega.margin_top_30
+  %h1
+    = @sacred_object.title
+  .news_body
+    = @sacred_object.contacts
+  .news_body
+    = @sacred_object.history.html_safe
+  - if @sacred_object.attachments
+    - @sacred_object.attachments.each do |attachment|
+      = image_tag attachment.attachment.url
+  - if @sacred_object.news
+    %h2
+      Зв'язані новини
+    %br/
+    - @sacred_object.news.each do |news_item|
+      = news_item.title
+      %br/
