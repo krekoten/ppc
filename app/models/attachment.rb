@@ -3,6 +3,7 @@ class Attachment < ActiveRecord::Base
 
 	has_attached_file :attachment,\
 		:styles => { :small_thumb => "50x50>", :thumb => "100x100>" },\
+		:path => ':attachment/:id/:style/:filename',
 		:bucket => 'ppcorgua',\
 		:s3_credentials => File.join(Rails.root, 'config', 'aws.yml'),\
 		:url => ":s3_domain_url",\
