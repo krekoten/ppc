@@ -26,9 +26,12 @@
     = @sacred_object.history.html_safe
   .clear
   - unless @sacred_object.news.empty?
-    %h2.news_title
-      Зв'язані новини
-    %br/
-    - @sacred_object.news.each do |news_sacred_object|
-      = link_to news_sacred_object.title, news_sacred_object
+    .grid_1.alpha
+      &nbsp;
+    .grid_8.omega
+      %h2.news_title
+        Зв'язані новини
       %br/
+      - @sacred_object.news.each do |news_sacred_object|
+        = link_to news_sacred_object.title, news_sacred_object
+        %br/

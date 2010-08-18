@@ -16,4 +16,4 @@
   .grid_1.alpha
     &nbsp;
   .grid_8.omega.news_body
-    = news_short.body.truncate(200).html_safe
+    = Sanitize.clean(news_short.body).truncate(200).html_safe

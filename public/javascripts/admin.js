@@ -6,6 +6,8 @@ document.observe("dom:loaded", function() {
     cloned_elem.down('a').observe('click', function(event) {
       var element = event.element();
       element.up('div').remove();
+      return false;
     });
+    return false;
   });
 });
