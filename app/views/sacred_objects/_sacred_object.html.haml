@@ -1,2 +1,11 @@
-%li
-  = link_to sacred_object.title, sacred_object
+.grid_9.alpha.omega
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega
+    %h2.news_title
+      = link_to sacred_object.title, sacred_object
+  .clear
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega.news_body
+    = sacred_object.history.truncate(200).html_safe

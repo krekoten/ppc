@@ -317,22 +317,16 @@ blockquote {
   }
 }
 
-.news_title {
+a {
+  color: #000;
+}
+
+.news_title, .news_title a {
   color: #898989;
+  text-decoration: none;
   font: {
     size: 30px;
     family: Arial;
-  }
-}
-
-h2 {
-  margin: 0;
-  a {
-    color: #898989;
-    font: {
-      size: 14px;
-      family: Arial;
-    }
   }
 }
 

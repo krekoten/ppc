@@ -13,7 +13,7 @@
       = @item.author
   .grid_5.omega
   .clear
-  - if @item.attachments.limit(3)
+  - unless @item.attachments.limit(3).empty?
     %br/
     .grid_1.alpha
       &nbsp;
@@ -28,6 +28,6 @@
   .grid_8.omega.news_body
     = @item.body.html_safe
   .clear
-  .grid_9.source
+  .grid_9.source.alpha.omega
     Джерело:
-    = @item.source
+    = link_to(@item.source, (@item.source.include?('http') ? @item.source : "http://#{@item.source}"))

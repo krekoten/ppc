@@ -242,17 +242,14 @@ blockquote {
   .author span {
     margin-left: 5px; }
 
-.news_title {
+a {
+  color: #000; }
+
+.news_title, .news_title a {
   color: #898989;
+  text-decoration: none;
   font-size: 30px;
   font-family: Arial; }
-
-h2 {
-  margin: 0; }
-  h2 a {
-    color: #898989;
-    font-size: 14px;
-    font-family: Arial; }
 
 .news_body {
   color: #000;

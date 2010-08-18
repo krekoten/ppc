@@ -1,17 +1,34 @@
 .grid_9.alpha.omega.margin_top_30
-  %h1
-    = @sacred_object.title
-  .news_body
-    = @sacred_object.contacts
-  .news_body
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega
+    %h1.news_title
+      = @sacred_object.title
+  .clear
+  - unless @sacred_object.attachments.limit(3).empty?
+    %br/
+    .grid_1.alpha
+      &nbsp;
+    .grid_8.omega
+    - @sacred_object.attachments.limit(3).each do |attachment|
+      .grid_2
+        = image_tag attachment.attachment.url(:thumb)
+    .clear
+    %br/
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega.news_body
+    = @sacred_object.contacts.html_safe
+  .clear
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega.news_body
     = @sacred_object.history.html_safe
-  - if @sacred_object.attachments
-    - @sacred_object.attachments.each do |attachment|
-      = image_tag attachment.attachment.url
-  - if @sacred_object.news
-    %h2
+  .clear
+  - unless @sacred_object.news.empty?
+    %h2.news_title
       Зв'язані новини
     %br/
-    - @sacred_object.news.each do |news_item|
-      = news_item.title
+    - @sacred_object.news.each do |news_sacred_object|
+      = link_to news_sacred_object.title, news_sacred_object
       %br/
