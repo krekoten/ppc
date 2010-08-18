@@ -5,8 +5,8 @@
     = link_to "НОВИНИ", news_index_url
   %li.center
     = link_to "МАПА ПАЛОМНИКА", '#'
-  %li.center
-    = link_to "ПРЕС РЕЛІЗИ", '#'
+  %li.center{:class => (current_page?(:controller => :press_releases) ? 'active' : '')}
+    = link_to "ПРЕС РЕЛІЗИ", press_releases_url
   %li.center
     = link_to "ЗВОРОТНІЙ ЗВ'ЯЗОК", '#'
   %li.center

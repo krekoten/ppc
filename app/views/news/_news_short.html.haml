@@ -1,3 +1,19 @@
-%li
-  = news_short.held_on
-  = link_to news_short.title, news_short
+.grid_9.alpha.omega
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega
+    %h2
+      = link_to news_short.title, news_short
+  .clear
+  .grid_1.omega.held_on
+    %span
+      = news_short.held_on.try(:strftime, "%d/%m/%y")
+  .grid_3.alpha.author
+    %span
+      = news_short.author
+  .grid_5.omega
+  .clear
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega.news_body
+    = news_short.body.truncate(200).html_safe
