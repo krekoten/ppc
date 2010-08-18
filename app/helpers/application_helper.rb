@@ -11,9 +11,6 @@ module ApplicationHelper
   
   def css_for_controller_and_action
     css = {
-      'welcome#index' => [
-        'welcome/index'
-      ],
       'news#index'    => [
         'news/index'
       ],

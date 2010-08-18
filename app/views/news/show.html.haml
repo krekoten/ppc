@@ -1,20 +1,33 @@
 .grid_9.alpha.omega.margin_top_30
-  %h1
-    = @item.title
-  .news_body
-    = @item.body.html_safe
-  .held_on
-    = @item.held_on
-  - if @item.author
-    .author
-      Автор:
-      %br/
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega
+    %h1.news_title
+      = @item.title
+  .clear
+  .grid_1.omega.held_on
+    %span
+      = @item.held_on.strftime("%d/%m/%y")
+  .grid_3.alpha.author
+    %span
       = @item.author
-  - if @item.source
-    .source
-      Джерело:
-      %br/
-      = @item.source
-  - if @item.attachments
-    - @item.attachments.each do |attachment|
-      = image_tag attachment.attachment.url
+  .grid_5.omega
+  .clear
+  - if @item.attachments.limit(3)
+    %br/
+    .grid_1.alpha
+      &nbsp;
+    .grid_8.omega
+    - @item.attachments.limit(3).each do |attachment|
+      .grid_2
+        = image_tag attachment.attachment.url(:thumb)
+    .clear
+    %br/
+  .grid_1.alpha
+    &nbsp;
+  .grid_8.omega.news_body
+    = @item.body.html_safe
+  .clear
+  .grid_9.source
+    Джерело:
+    = @item.source

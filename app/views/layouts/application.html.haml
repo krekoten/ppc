@@ -14,7 +14,27 @@
         .grid_3.alpha
           = render :partial => 'layouts/application/left'
         .grid_9.omega
+          %h1
+            Вітаємо на порталі Партіаршого Паломницько Центру
+          %blockquote
+            У неділю Літургією в київському костелі Святого Олександра розпочалися духовні вправи (реколекції) єпископів УГКЦ та РКЦ в Україні. Духовні вправи тривають упродовж трьох днів у приміщенні семінарії Києво-Житомирської дієцезії РКЦ у Ворзелі. Навчання проводить Владика-емерит Станіслав Падевський.
+          = link_to 'Дізнайтесь більше про нас', '#', :class => 'more'
+          .grid_9.alpha.omega.top_grey.margin_top_30
           = yield
+          .grid_9.margin_top_30
+          .yellow_map
+            .map_header
+              МАНДРУЙ З НАМИ
+            .map_body
+              Духовні вправи тривають упродовж трьох днів у приміщенні семінарії Києво-Житомирської дієцезії РКЦ у Ворзелі.
+          .blue_map
+            .map_header
+              МАПИ ТА МАРШРУТИ
+            .map_body
+              Духовні вправи тривають упродовж трьох днів у приміщенні семінарії Києво-Житомирської дієцезії РКЦ у Ворзелі.
+          .grid_9.important_events.alpha.omega
+            ВАЖЛИВІ ПОДІЇ
+          = render :partial => 'welcome/important_event', :collection => @events
       .grid_12.alpha.omega.bottom
         = render :partial => 'layouts/application/bottom'
       .grid_12.alpha.omega.footer

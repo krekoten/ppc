@@ -4,3 +4,4 @@ log/*.log
 tmp/**/*
 db/schema.rb
 *.swp
+public/system
