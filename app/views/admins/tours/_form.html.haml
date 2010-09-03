@@ -1,0 +1,15 @@
+.grid_12
+  = form.label :title, "Заголовок"
+  %span.required
+    *
+  %br/
+  = form.text_field :title
+.grid_12
+  %br/
+  = form.label :body, "Тіло"
+  %span.required
+    *
+  %br/
+  = form.text_area :body, :class => "mceEditor"
+.grid_12
+  = submit_tag 'Зберегти'

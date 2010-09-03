@@ -1,0 +1,9 @@
+.grid_11{:class => tour_counter % 2 == 0 ? 'odd' : 'even'}
+  .grid_8.alpha
+    = tour.title
+  .grid_1
+    = link_to 'Детально', admins_tour_url(tour)
+  .grid_1
+    = link_to 'Редагувати', edit_admins_tour_url(tour)
+  .grid_1.omega
+    = link_to 'Видалити', admins_tour_url(tour), :method => :delete, :confirm => 'Ви впевнені? Відновити буде неможливо.'

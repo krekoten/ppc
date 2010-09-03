@@ -1,0 +1,5 @@
+%h2
+  Новий тур
+= form_for @tour, :url => admins_tours_url, :html => { :multipart => true } do |form| 
+  = render :partial => 'form', :locals => {:form => form, :item => @tour}
+= link_to 'Назад', admins_tours_url

@@ -1,0 +1,5 @@
+%h2
+  = @tour.title + " (Редагування)"
+= form_for @tour, :as => :news, :url => admins_tour_url(@tour), :html => { :multipart => true } do |form| 
+  = render :partial => 'form', :locals => {:form => form, :item => @tour}
+= link_to 'Назад', admins_tours_url
