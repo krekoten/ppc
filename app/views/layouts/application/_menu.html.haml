@@ -9,5 +9,5 @@
     = link_to "ПРЕС РЕЛІЗИ", press_releases_url
   %li.center
     = link_to "ЗВОРОТНІЙ ЗВ'ЯЗОК", '#'
-  %li.center
-    = link_to "ТУРИ", '#'
+  %li.center{:class => (current_page?(:controller => :tours) ? 'active' : '')}
+    = link_to "ТУРИ", tours_url

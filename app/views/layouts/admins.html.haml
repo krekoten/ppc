@@ -12,12 +12,14 @@
       .grid_12.header
         %h1
           Патріарший паломницький центр
-        .grid_3
+        .grid_1
           &nbsp;
         .grid_2.menu{:class => (current_page?(:controller => 'admins/news') ? 'active' : '')}
           = link_to 'Новини', admins_news_index_url
         .grid_2.menu{:class => (current_page?(:controller => 'admins/sacred_objects') ? 'active' : '')}
           = link_to "Сакральні об'єкти", admins_sacred_objects_url
+        .grid_2.menu{:class => (current_page?(:controller => 'admins/tours') ? 'active' : '')}
+          = link_to "Тури", admins_tours_url
         .grid_2.menu{:class => (current_page?(:controller => 'admins/admins') ? 'active' : '')}
           = link_to 'Адміни', admins_admins_url
         .grid_1
