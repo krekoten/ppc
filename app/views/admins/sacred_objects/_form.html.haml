@@ -1,16 +1,45 @@
 .grid_12
-  = form.label :title, "Заголовок"
+  = form.label :title, "Повна назва сакрального (паломницького) об’єкту"
   %span.required
     *
   %br/
   = form.text_field :title
+
 .grid_12
-  %br/
-  = form.label :contacts, "Контакти"
+  = form.label :eparchy, "Єпархія"
   %span.required
     *
   %br/
-  = form.text_area :contacts
+  = form.text_field :eparchy
+
+.grid_12
+  = form.label :decanat, "Деканат"
+  %span.required
+    *
+  %br/
+  = form.text_field :decanat
+
+.grid_12
+  = form.label :region, "Область"
+  %span.required
+    *
+  %br/
+  = form.text_field :region
+
+.grid_12
+  = form.label :district, "Район"
+  %span.required
+    *
+  %br/
+  = form.text_field :district
+
+.grid_12
+  = form.label :city, "Населений пункт"
+  %span.required
+    *
+  %br/
+  = form.text_field :city
+
 .grid_12
   %br/
   = form.label :history, "Історична довідка"
@@ -18,6 +47,13 @@
     *
   %br/
   = form.text_area :history, :class => "mceEditor"
+.grid_12
+  %br/
+  = form.label :contacts, "Інше"
+  %span.required
+    *
+  %br/
+  = form.text_area :contacts
 .grid_12
   %label
     Зв'язані новини

@@ -1,6 +1,6 @@
 class SacredObject < ActiveRecord::Base
 
-  validates_presence_of :title, :contacts, :history
+  validates_presence_of :title, :contacts, :history, :eparchy, :decanat, :region, :district, :city
 
   scope :latest, order('held_on DESC')
 
